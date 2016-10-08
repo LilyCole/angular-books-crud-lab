@@ -1,13 +1,18 @@
   <div class='row'>
     <div class='book-show-container'>
-      <img src={{booksShowCtrl.book.image}}>
-      <h2 ng-hide='editing'>{{booksShowCtrl.book.title}}</h2>
-      <h2 ng-show='editing'>Title: <input ng-model='booksShowCtrl.book.title' type='text'></h2>
-      <p ng-hide='editing'><b>By:</b> {{booksShowCtrl.book.author}}</p>
-      <p ng-show='editing'><b>By:</b> <input ng-model='booksShowCtrl.book.author' type='text'></p>
-      <p ng-hide='editing'><b>Release Date:</b> {{booksShowCtrl.book.releaseDate}}</p>
-      <p ng-show='editing'><b>Release Date:</b> <input ng-model='booksShowCtrl.book.releaseDate' type='text'></p>
-      <p><button class='button edit-book-button' ng-hide='editing' ng-click='editing = true'>EDIT</button></p>
-      <p><button class='button edit-book-button' ng-show='editing' ng-click='booksShowCtrl.editBook(booksShowCtrl.book); editing = false'>SAVE</button></p>
+      <div class='edit-book-image'>
+        <img ng-class='{"opaque":editing==true}' src={{booksShowCtrl.book.image}}>
+        <p id='edit-image' ng-show='editing'><b>Image URL:</b> <input ng-model='booksShowCtrl.book.image' type='text'></p>
+      </div>
+      <div class='edit-book-info'>
+        <h2 ng-hide='editing'>{{booksShowCtrl.book.title}}</h2>
+        <h2 ng-show='editing'>Title: <input ng-model='booksShowCtrl.book.title' type='text'></h2>
+        <p ng-hide='editing'><b>By:</b> {{booksShowCtrl.book.author}}</p>
+        <p ng-show='editing'><b>By:</b> <input ng-model='booksShowCtrl.book.author' type='text'></p>
+        <p ng-hide='editing'><b>Release Date:</b> {{booksShowCtrl.book.releaseDate}}</p>
+        <p ng-show='editing'><b>Release Date:</b> <input ng-model='booksShowCtrl.book.releaseDate' type='text'></p>
+        <p><button class='button edit-book-button' ng-hide='editing' ng-click='editing = true'>EDIT</button></p>
+        <p><button class='button edit-book-button' ng-show='editing' ng-click='booksShowCtrl.editBook(booksShowCtrl.book); editing = false'>SAVE</button></p>
+      </div>
     </div>
   </div>

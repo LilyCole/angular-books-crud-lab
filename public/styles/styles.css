@@ -61,6 +61,18 @@ body {
 .book-show-container img {
   height: 40vh;
   width: 28%;
+  position: relative;
+}
+
+.edit-book-image {
+  position: relative;
+}
+
+.edit-book-image p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .book-info {
@@ -93,6 +105,10 @@ body {
 .header a {
   text-decoration: none;
   color: white;
+}
+
+.opaque {
+  opacity: 0.3;
 }
 
 .search {
