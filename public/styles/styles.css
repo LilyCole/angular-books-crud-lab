@@ -1,0 +1,113 @@
+/*div {
+  border: 2px solid green;
+}*/
+
+body {
+  font-family: 'Abril Fatface', cursive;
+  padding-top: 1%;
+  background-color: gray;
+}
+
+.add-book-div {
+  padding: 5%;
+  text-align: center;
+}
+
+.add-book-div input {
+  padding: 1%;
+}
+
+.button {
+  cursor: pointer;
+  color: white;
+}
+
+.delete-book {
+  background-color: maroon;
+  text-shadow: -1px 1px maroon;
+  border: none;
+  padding: 5%;
+}
+
+.edit-book-button, .add-book {
+  background-color: gray;
+  text-shadow: -1px 1px gray;
+  border: none;
+  padding: 1%;
+}
+
+.book-div-container {
+  display: inline-block;
+  width: 28%;
+  height: 40vh;
+  position: relative;
+  margin: 2%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.book-div-container img {
+  height: 100%;
+  width: 100%;
+  opacity: 0.3;
+}
+
+.book-show-container {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  text-align: center;
+}
+
+.book-show-container img {
+  height: 40vh;
+  width: 28%;
+}
+
+.book-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.header {
+  background-image: url(http://photos4.meetupstatic.com/photos/theme_body/c/full_12.jpeg);
+  height: 30vh;
+}
+
+.header h1 {
+  color: white;
+  font-size: 6em;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  text-align: center;
+  padding-top: 3%;
+}
+
+.header a {
+  text-decoration: none;
+  color: white;
+}
+
+.search {
+  text-align: center;
+  padding-top: 1%;
+}
+
+.search input {
+  padding: 10px;
+  border: solid 1px #fff;
+  box-shadow: inset 1px 1px 2px 0 #707070;
+  transition: box-shadow 0.3s;
+}
+
+.search input:focus,
+.search input.focus, {
+  box-shadow: inset 1px 1px 2px 0 #c9c9c9;
+}

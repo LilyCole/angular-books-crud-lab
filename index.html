@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang='en' ng-app='angularBooks'>
+  <head>
+    <meta charset='UTF-8' />
+    <base href="/">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>📚 Angular Books API 📚</title>
+
+    <!-- STYLES -->
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+    <link rel="stylesheet" href="/public/styles/styles.css">
+    
+    <!-- VENDOR SCRIPTS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-route.js"></script>
+
+    <!-- SCRIPTS -->  
+    <script src='/public/scripts/app.js'></script>
+    <script src='/public/scripts/controllers/BooksIndexController.js'></script>
+    <script src='/public/scripts/controllers/BooksShowController.js'></script>
+
+  </head>
+  <!-- <body ng-controller='BooksIndexController as booksIndexCtrl'> -->
+  <body>
+
+    <div class='container'>
+      <div class='header'>
+        <h1><a href='index.html'>LIBRARY</a></h1> 
+      </div>
+
+      
+      <div ng-view></div>
+    </div>
+   
+  </body>
+</html>

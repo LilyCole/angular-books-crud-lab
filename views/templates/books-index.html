@@ -1,0 +1,32 @@
+  <div class='search'>
+    <input type='text' ng-model='searchText' placeholder='Search Books'>
+  </div>
+
+  <div class='container'>
+    <div class='book-div-container' ng-repeat="books in booksIndexCtrl.books | orderBy: 'title' | filter: searchText">
+      <img ng-click='booksIndexCtrl.bookLink(books._id)' src={{books.image}}>
+      <div class='book-info'>
+        <div class='row'>
+          <h1>{{books.title}}</h1>
+          <p><b>By:</b> {{books.author}}</p>
+        </div>
+      </div>
+      <div class='row'>
+        <!-- <p><b>Release Date:</b> {{books.releaseDate}}</p> -->
+        <button class='button delete-book' ng-click='booksIndexCtrl.deleteBook(books)'>DELETE</button>
+      </div>
+    </div>
+  </div>
+
+  <div class='row'>
+    <div class='add-book-div'>
+      <h1>ADD A NEW BOOK</h1>
+      <form id='addBookForm' ng-submit='booksIndexCtrl.createBook()'>
+        <input type='text' placeholder='New Book Title' ng-model='booksIndexCtrl.newBook.title'>
+        <input type='text' placeholder='New Book Author' ng-model='booksIndexCtrl.newBook.author'>
+        <input type='text' placeholder='New Book Release Date' ng-model='booksIndexCtrl.newBook.releaseDate'>
+        <input type='text' placeholder='New Book Image' ng-model='booksIndexCtrl.newBook.image'>
+        <p><button class='button add-book' type='submit'>SUBMIT</button></p>
+      </form>
+    </div>
+  </div>
