@@ -1,5 +1,5 @@
 /*div {
-  border: 2px solid green;
+  border: 1px solid green;
 }*/
 
 body {
@@ -37,19 +37,37 @@ body {
 }
 
 .book-div-container {
+  padding-top: 15px;
   display: inline-block;
-  width: 28%;
+  width: 70px;
   height: 40vh;
   position: relative;
-  margin: 2%;
   text-align: center;
   cursor: pointer;
+  border-radius: 5px;
 }
 
-.book-div-container img {
+.book-div {
+  width: 70px;
+  height: 40vh;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 2px solid black;
+  /*opacity: 0.5;*/
+}
+
+/*.book-div-container img {
   height: 100%;
   width: 100%;
   opacity: 0.3;
+}*/
+
+.book-div-container h1 {
+  transform: rotate(270deg);
+  font-size: 20px;
+  width: 200px;
 }
 
 .book-show-container {
@@ -62,6 +80,14 @@ body {
   height: 40vh;
   width: 28%;
   position: relative;
+}
+
+.button-row {
+  background-color: #935f2f;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  padding: 10%;
+
 }
 
 .edit-book-image {
