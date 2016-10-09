@@ -5,6 +5,7 @@
   <div class='container'>
     <div class='book-div-container' ng-repeat="books in booksIndexCtrl.books | orderBy: 'title' | filter: searchText">
       <div class='book-div' ng-style={{books.style}} ng-click='booksIndexCtrl.bookLink(books._id)'>
+      <!-- <div class='book-div'> -->
     <!-- <img ng-click='booksIndexCtrl.bookLink(books._id)' src={{books.image}}> -->
         <div class='book-info'>
           <div class='row'>

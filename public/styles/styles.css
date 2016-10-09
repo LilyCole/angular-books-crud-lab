@@ -1,20 +1,28 @@
 /*div {
   border: 1px solid green;
-}*/
-
+}
+*/
 body {
   font-family: 'Abril Fatface', cursive;
   padding-top: 1%;
-  background-color: gray;
+  /*background-color: gray;*/
+  background-image: url('http://cdn.wallpapersafari.com/55/85/FgTHrv.jpg');
+  background-size: cover;
 }
 
 .add-book-div {
   padding: 5%;
   text-align: center;
+  margin: 10px;
 }
 
 .add-book-div input {
   padding: 1%;
+}
+
+.add-book-div h1, form {
+  background-color: white;
+  border-radius: 2px;
 }
 
 .button {
@@ -55,14 +63,16 @@ body {
   cursor: pointer;
   border-radius: 5px;
   border: 2px solid black;
+  background-image: url('../images/book-border-test.png');
+  /*position: relative;*/
   /*opacity: 0.5;*/
 }
 
-/*.book-div-container img {
+.book-div-container img {
   height: 100%;
   width: 100%;
   opacity: 0.3;
-}*/
+}
 
 .book-div-container h1 {
   transform: rotate(270deg);
@@ -111,7 +121,7 @@ body {
 .container {
   width: 85%;
   margin: 0 auto;
-  background-color: white;
+  /*background-color: white;*/
   border-radius: 5px;
 }
 
