@@ -20,4 +20,8 @@ function BooksShowController ($http,   $routeParams  ) {
       data: book
       })
   }
+
+  vm.showEdit = function() {
+    
+  }
 }

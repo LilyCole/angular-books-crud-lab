@@ -1,7 +1,7 @@
-  <div class='row'>
-    <div class='book-show-container'>
-      <div class='edit-book-image'>
-        <img ng-class='{"opaque":editing==true}' src={{booksShowCtrl.book.image}}>
+   <div class='row container'>
+    <div class='books csstransforms3d'>
+      <div class='book edit-book-image'>
+        <img ng-class='{"opaque":editing==true}' src={{booksShowCtrl.book.image}} ng-click='editing = true'>
         <p id='edit-image' ng-show='editing'><b>Image URL:</b> <input ng-model='booksShowCtrl.book.image' type='text'></p>
       </div>
       <div class='edit-book-info'>
@@ -13,6 +13,15 @@
         <p ng-show='editing'><b>Release Date:</b> <input ng-model='booksShowCtrl.book.releaseDate' type='text'></p>
         <p><button class='button edit-book-button' ng-hide='editing' ng-click='editing = true'>EDIT</button></p>
         <p><button class='button edit-book-button' ng-show='editing' ng-click='booksShowCtrl.editBook(booksShowCtrl.book); editing = false'>SAVE</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class='container'>
+    <div class='books csstransforms3d'>
+      <div class='book' ng-repeat="books in booksIndexCtrl.books | orderBy: 'title' | filter: searchText">
+        <img ng-click='booksIndexCtrl.bookLink(books._id)' src={{books.image}}>
+        <button class='button delete-book' ng-click='booksIndexCtrl.deleteBook(books)'>DELETE</button>
       </div>
     </div>
   </div>

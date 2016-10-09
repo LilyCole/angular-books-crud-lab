@@ -3,16 +3,9 @@
   </div>
 
   <div class='container'>
-    <div class='book-div-container' ng-repeat="books in booksIndexCtrl.books | orderBy: 'title' | filter: searchText">
-      <img ng-click='booksIndexCtrl.bookLink(books._id)' src={{books.image}}>
-      <div class='book-info'>
-        <div class='row'>
-          <h1>{{books.title}}</h1>
-          <p><b>By:</b> {{books.author}}</p>
-        </div>
-      </div>
-      <div class='row'>
-        <!-- <p><b>Release Date:</b> {{books.releaseDate}}</p> -->
+    <div class='books csstransforms3d'>
+      <div class='book' ng-repeat="books in booksIndexCtrl.books | orderBy: 'title' | filter: searchText">
+        <img ng-click='booksIndexCtrl.bookLink(books._id)' src={{books.image}}>
         <button class='button delete-book' ng-click='booksIndexCtrl.deleteBook(books)'>DELETE</button>
       </div>
     </div>
