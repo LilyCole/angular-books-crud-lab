@@ -23,7 +23,7 @@ body {
 
 .book {
   display: inline-block;
-  width: 20%;
+  width: 17%;
   height: 35vh;
   position: relative;
   text-align: center;
@@ -55,7 +55,7 @@ body {
   -moz-perspective: 100px;
   -moz-transform: rotateY(-3deg);
   -webkit-transform: perspective(100) rotateY(-3deg);
-  outline: 1px solid transparent; /* Helps smooth jagged edges in Firefox */
+  outline: 1px solid transparent; 
   box-shadow: none;
   margin: 20px;
 }
